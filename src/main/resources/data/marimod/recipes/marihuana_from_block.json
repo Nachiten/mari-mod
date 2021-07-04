@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "pattern": [
+    "B  ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "B": {
+      "item": "marimod:marihuana_block"
+    }
+  },
+  "result": {
+    "item": "marimod:marihuana",
+    "count": 9
+  }
+}
