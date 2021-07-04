@@ -7,6 +7,4 @@ public class MarihuanaBlock extends Block {
     public MarihuanaBlock(Settings settings) {
         super(settings);
     }
-
-
 }
