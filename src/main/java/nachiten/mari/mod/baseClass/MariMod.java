@@ -1,9 +1,8 @@
 package nachiten.mari.mod.baseClass;
 
-import nachiten.mari.mod.blockItems.MarihuanaBlockItem;
-import nachiten.mari.mod.blocks.MarihuanaBlock;
-import nachiten.mari.mod.items.Cocaina;
-import nachiten.mari.mod.items.Marihuana;
+import nachiten.mari.mod.blockItems.*;
+import nachiten.mari.mod.blocks.*;
+import nachiten.mari.mod.items.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
