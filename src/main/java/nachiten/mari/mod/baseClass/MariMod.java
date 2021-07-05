@@ -3,8 +3,6 @@ package nachiten.mari.mod.baseClass;
 import nachiten.mari.mod.blockItems.*;
 import nachiten.mari.mod.blocks.*;
 import nachiten.mari.mod.foods.*;
-import nachiten.mari.mod.gui.ExampleBlock;
-import nachiten.mari.mod.gui.ExampleBlockEntity;
 import nachiten.mari.mod.items.*;
 import nachiten.mari.mod.mariCrop.MariCropBlock;
 import net.fabricmc.api.ModInitializer;
@@ -12,19 +10,19 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.*;
-import net.minecraft.screen.ScreenHandler;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class MariMod implements ModInitializer {
+
+	static final String modName = "marimod";
+
 	public static final ItemGroup ITEM_GROUP = FabricItemGroupBuilder.build(
-			new Identifier("marimod", "marimod_items"),
+			new Identifier(modName, "marimod_items"),
 			() -> new ItemStack(Blocks.GRASS_BLOCK));
 
 	public static final Block MARIHUANA_BLOCK = new MarihuanaBlock(FabricBlockSettings.of(Material.WOOL).strength(0.5f).resistance(0.5f));
@@ -36,26 +34,13 @@ public class MariMod implements ModInitializer {
 	public static final CropBlock MARIHUANA_CROP_BLOCK = new MariCropBlock(AbstractBlock.Settings.of(Material.PLANT).nonOpaque().noCollision().ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP));
 	public static final Item MARIHUANA_SEEDS = new AliasedBlockItem(MariMod.MARIHUANA_CROP_BLOCK, new Item.Settings().group(MariMod.ITEM_GROUP));
 
-	// ---- BLOQUE CON FUNCIONALIDAD ----
-
-	public static final Block EXAMPLE_BLOCK = new ExampleBlock(FabricBlockSettings.of(Material.METAL));
-
-	public static BlockEntityType<ExampleBlockEntity> EXAMPLE_BLOCK_ENTITY;
-
-	static final String modName = "marimod";
-
 	@Override
 	public void onInitialize() {
 		registrarObjetos();
 
 		registrarSemillasMarihuana();
 
-		registrarBloqueConFuncionalidad();
-	}
-
-	void registrarBloqueConFuncionalidad() {
-		Registry.register(Registry.BLOCK, new Identifier(modName, "gui_block"), EXAMPLE_BLOCK);
-		EXAMPLE_BLOCK_ENTITY = Registry.register(Registry.BLOCK_ENTITY_TYPE, "marimod:demo_block_entity", FabricBlockEntityTypeBuilder.create(ExampleBlockEntity::new, EXAMPLE_BLOCK).build(null));
+		//registrarBloqueConFuncionalidad();
 	}
 
 	void registrarObjetos() {
