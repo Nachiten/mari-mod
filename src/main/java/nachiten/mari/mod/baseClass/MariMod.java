@@ -20,6 +20,7 @@ public class MariMod implements ModInitializer {
 	public static final BlockItem MARIHUANA_BLOCK_ITEM = new MarihuanaBlockItem(MARIHUANA_BLOCK, new FabricItemSettings().group(ItemGroup.MISC));
 	public static final Item MARIHUANA = new Marihuana(new Item.Settings().group(ItemGroup.MISC).maxCount(16));
 	public static final Item COCAINA = new Cocaina(new Item.Settings().group(ItemGroup.MISC).maxCount(16));
+	//public static final Item MARIHUANA_SEEDS = new Item();
 
 	@Override
 	public void onInitialize() {
