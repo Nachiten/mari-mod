@@ -2,5 +2,7 @@
   "item.marimod.marihuana": "Marihuana",
   "item.marimod.marihuana_block_item": "Bloque de Marihuana",
   "block.marimod.marihuana_block": "Bloque de Marihuana",
-  "item.marimod.cocaina": "Cocaina"
+  "item.marimod.cocaina": "Cocaina",
+  "itemGroup.marimod.marimod_items": "Mari Mod",
+  "item.marimod.porro": "Cigarro de Marihuana"
 }

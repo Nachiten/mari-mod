@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " P ",
+    " W ",
+    " P "
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:paper"
+    },
+    "W": {
+      "item": "marimod:marihuana"
+    }
+  },
+  "result": {
+    "item": "marimod:porro",
+    "count": 1
+  }
+}
