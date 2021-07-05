@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "marimod:block/marihuana_crop_block_stage1"
+  }
+}
